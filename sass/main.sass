@@ -1,0 +1,344 @@
+@import "colors"
+@import "reset"
+@import "fontello"
+
+html
+ font-size: 10px
+
+img
+ max-width: 100%
+
+body
+ margin: 0 
+ background-color: $body-bg
+ color: $dark
+ 
+ padding-top: 0
+ font-size: 14px
+a
+ color: $active-color
+h2 
+ color: $active-color
+ font-size: 24px
+ padding: 20px
+ letter-spacing: 1px
+ text-align: center
+ text-transform: uppercase
+ font-family: 'Lobster', cursive
+h3
+ color: $active-color
+ font-size: 20px
+ padding: 10px 20px 20px 20px
+ letter-spacing: 1px
+ text-align: center
+ 
+ font-family: 'Lobster', serif
+
+.top-nav
+  background-color:  rgba(13,13,13,0.3)
+  padding: 0 34px -20px
+  position: fixed
+  width: 100%
+  // z-index: 10000
+  font-family: 'Merriweather', serif
+  letter-spacing: 1px
+  &_btn
+   // z-index: 1000000000
+   color: white
+   display: none
+   width: 30px
+   height: 30px  
+   background-color: transparent
+   border: none
+   margin: 0
+   font-size: 18px
+   position: absolute
+   right: 15px
+   top: -50px
+   padding-left: 1px
+   &:hover
+    cursor: pointer
+
+  &_menu
+   list-style: none
+   padding: 0
+   padding-top: 10px
+   display: flex
+   color: $white
+   li
+    margin-right: 35px
+    &:last-child
+     margin-right: 0
+    &::before
+     content: '|'
+     margin-right: 15px
+     margin-left: -20px
+    &:first-child
+     &::before
+      content: ''
+    a
+     text-transform: uppercase
+     text-decoration: none
+     color: $white
+     font-weight: 700
+     &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      background-color: darken($white, 20%)
+      transform: translateY(5px) scale(0)
+      transition: all 0.2s
+     &:hover
+      text-decoration:none
+      color: darken($white, 20%)
+
+      &:after
+       transform: translateY(5px) scale(1)
+.carousel
+ margin: 0
+ &-caption
+  align: center
+  top: 35%
+  h1
+   font-size: 70px
+   line-height: 62px
+   margin-bottom: 30px
+   font-family: 'Teko', sans-serif
+   text-transform: uppercase
+   letter-spacing: 2px
+   margin-top: -10px
+   color: $white
+   animation: blur .75s ease-out infinite
+   text-shadow: 0px 0px 5px #FFF, 0px 0px 7px #FFF
+  p
+  font-size: 28px
+  line-height: 42px
+  text-shadow: 1px 1px 1px black
+  color: $white
+  font-family: 'Lobster', cursive
+  letter-spacing: 2px
+
+
+// блок с описанием
+.info
+ padding-left: 30px
+ display: block
+ padding-top: 40px
+ padding-bottom: 40px
+ margin-top: 40px
+ margin-bottom: 40px
+ 
+
+ &-text
+  margin-top: 20px
+  font-size: 17px
+  font-family: 'Roboto', sans-serif
+ &-video
+  padding: 0
+  display: block
+  margin-bottom: 10px
+  iframe
+   max-width:  100% 
+   height: 200px
+   align: center
+
+
+
+
+
+// футер
+
+.footer 
+ background-color: $dark
+ color: $footer-text
+ padding-top: 30px
+ padding-bottom: 30px
+ margin-bottom: 0  
+ &_name
+  display: block
+  &_title
+   text-align: center
+   font-family: 'Lobster', cursive
+   letter-spacing: 1px
+   font-size: 15px
+  &_owner
+   text-align: center
+   font-size: 25px
+   color: $white
+   font-family: 'Merriweather', serif
+   letter-spacing: 1px
+ &_social
+  display: block
+  align-items: center
+
+  &_title
+   font-family: 'Lobster', cursive
+   letter-spacing: 1px
+   font-size: 15px
+   text-align: center
+   text-decoration: none
+  &_links
+   text-align: center
+   ul
+    margin-right: 35px
+    list-style: none
+    li
+     line-height: 32px
+     display: inline-block
+     margin-right: 10px
+
+     a
+      color: $white
+      display: inline-block
+      width: 42px
+      height: 42px
+      background-color: rgba($white, 0.1)
+      text-align: center
+      border-radius: 50%
+      padding: 5px
+      margin-left: 10px
+      transition: all 0.2s
+      font-size: 20px
+      &:hover
+       background-color: rgba($white, 0.9)
+       color: $dark
+ &_contact
+  display: block
+  align-items: center
+  &_title
+   font-family: 'Lobster', cursive
+   letter-spacing: 1px
+   font-size: 15px
+   text-align: center
+   text-decoration: none
+  &_cont
+   font-family: 'Merriweather', serif
+   text-align: center
+   color: $white
+   letter-spacing: 1px
+
+
+
+
+// контакты
+.content
+ display: inline-block
+ background-color: $grey
+ padding-top: 70px
+ text-align: center
+ padding-right: 30px
+ padding-bottom: 70px
+ 
+ .contacts
+  font-family: 'Merriweather', serif
+  min-height: 600px
+  font-size: 20px
+  i
+   margin-right: 12px
+   vertical-align: middle
+   color: $active-color
+
+  &_owner
+   padding-top: 10px
+   
+  &_social_links
+   ul
+    list-style: none
+    margin-top: 10px
+    padding: 0
+    li
+     display: inline-block
+     a
+      display: inline-block
+      background-color: $active-color
+      color: $white
+      margin-right: 15px
+      width: 32px
+      height: 32px
+      text-align: center
+      line-height: 32px
+      border-radius: 50%
+
+// шоу-программа
+.object
+
+ &-card
+  margin-left: 25px
+  border-radius: 10px
+  background-color: $white
+  margin-bottom: 30px
+  &:hover
+   box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  img
+   width: 100%
+   padding: 5px 5px 0px 5px
+  &_text
+   padding: 10px 30px 10px 30px
+  &_title
+   display: block
+   font-size: 16px
+   text-decoration: none
+   color: $active-color
+  &_btn
+   font-size: 14px 
+   display: block
+   text-align: center
+   background-color: $active-color
+   border-color: $active-color
+   &:hover
+    background-color: lighten($active-color, 20%)
+    border-color: lighten($active-color, 20%) 
+
+
+// участники
+.member
+ display: inline-block
+ background-color: $grey
+ padding-top: 70px
+ text-align: center
+ padding-right: 30px
+ padding-bottom: 70px
+ &-card
+  margin-left: 25px
+  background-color: $white
+  border-radius: 10px
+  margin-bottom: 30px
+  padding-right: 10px
+  &-photo
+   img
+    padding: 5px
+
+  &_social_links
+   
+   ul
+    list-style: none
+    margin-top: 30px
+    padding: 0
+    li
+     display: inline-block
+     a
+      display: inline-block
+      background-color: $active-color
+      color: $white
+      margin-right: 15px
+      width: 32px
+      height: 32px
+      text-align: center
+      line-height: 32px
+      border-radius: 50%
+
+ 
+  
+
+   
+
+
+   
+  
+
+
+
+
+
+@import "media"

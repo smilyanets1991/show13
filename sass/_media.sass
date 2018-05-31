@@ -1,0 +1,82 @@
+/* Адаптив для сайта */
+@media (max-width: 767px)
+ 
+ html
+  font-size: 5
+ body
+  // background-color: $dark
+  padding: 0
+ .top-nav
+  background-color: rgba(13,13,13,0.3)
+  padding: 0
+  &_btn
+   margin-top: 15px
+   display: block
+  &_menu
+   flex-direction: column
+   display: none
+   &__active
+    display: flex
+    margin-bottom: 0
+    padding-left: 0
+
+   li
+    line-height: 2
+    &:before
+     content: ''
+    a
+     &:after
+      display: none
+ .footer
+  padding-bottom: 80px
+  margin: 0
+  &_social
+   margin-top: 20px
+  &_contact
+   margin-top: 20px
+
+ .content
+  padding-left: 60px
+   
+
+ 
+  
+  
+@media (min-width:767px) and (max-width:991px)
+ html
+  font-size: 5
+ body
+  padding: 0
+  
+ .top-nav
+  background-color: rgba(13,13,13,0.3) 
+  padding: 0
+  &_btn
+   margin-top: 15px
+   display: block
+  &_menu
+   display: none 
+   &__active
+    display: flex
+    margin-bottom: 0
+    justify-content: space-around
+   li
+    margin-right: 0
+    line-height: 2
+    &:before
+     content: ''
+    a
+     &:after
+      display: none
+ 
+ 
+ .footer
+  margin-bottom: 0
+  padding-bottom: 50px
+  &_social
+   margin-top: 20px
+  &_contact
+   margin-top: 20px
+   
+
+   
